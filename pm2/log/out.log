@@ -1,0 +1,1037 @@
+2017-11-10 15:20 +08:00: [32m[2017-11-10 15:20:49.265] [INFO] /dao/dao.js - [39m---连接数据库 类型:default 参数:{"host":"127.0.0.1","user":"root","password":"890503","database":"poem","port":3306,"multipleStatements":true}
+2017-11-10 15:20 +08:00: true
+2017-11-10 15:20 +08:00: Example app listening at http://:::3000
+2017-11-10 15:21 +08:00: ---POST_/admin/user
+2017-11-10 15:21 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+---requstPSPost path:/user/query data:{"op":"phone","phone":"13212345678"}
+2017-11-10 15:21 +08:00: ---POST_/user/query
+2017-11-10 15:21 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+phone: 13212345678
+2017-11-10 15:21 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 15:21 +08:00: [36m[2017-11-10 15:21:44.371] [DEBUG] logInfo - [39mPOST /user/query 200
+2017-11-10 15:21 +08:00: ---response requstPSPost path:/user/query result:{"code":0,"data":{"op":"phone","userid":"userid_13212345678"}}
+2017-11-10 15:21 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 15:21 +08:00: [36m[2017-11-10 15:21:44.376] [DEBUG] logInfo - [39mPOST /admin/user 200
+2017-11-10 15:27 +08:00: ---POST_/admin/user
+2017-11-10 15:27 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+---requstPSPost path:/user/query data:{"op":"phone","phone":"13212345678"}
+2017-11-10 15:27 +08:00: ---POST_/user/query
+2017-11-10 15:27 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+phone: 13212345678
+2017-11-10 15:27 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 15:27 +08:00: [36m[2017-11-10 15:27:24.715] [DEBUG] logInfo - [39mPOST /user/query 200
+2017-11-10 15:27 +08:00: ---response requstPSPost path:/user/query result:{"code":0,"data":{"op":"phone","userid":"userid_13212345678"}}
+2017-11-10 15:27 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 15:27 +08:00: [36m[2017-11-10 15:27:24.718] [DEBUG] logInfo - [39mPOST /admin/user 200
+2017-11-10 15:30 +08:00: [32m[2017-11-10 15:30:50.841] [INFO] /dao/dao.js - [39m---连接数据库 类型:default 参数:{"host":"127.0.0.1","user":"root","password":"890503","database":"poem","port":3306,"multipleStatements":true}
+2017-11-10 15:30 +08:00: true
+2017-11-10 15:30 +08:00: Example app listening at http://:::3000
+2017-11-10 15:31 +08:00: ---POST_/admin/user
+2017-11-10 15:31 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+2017-11-10 15:31 +08:00: ---requstPSPost path:/user/query data:{"op":"phone","phone":"13212345678"}
+2017-11-10 15:31 +08:00: ---POST_/user/query
+2017-11-10 15:31 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+phone: 13212345678
+2017-11-10 15:31 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 15:31 +08:00: [36m[2017-11-10 15:31:13.720] [DEBUG] logInfo - [39mPOST /user/query 200
+2017-11-10 15:31 +08:00: ---response requstPSPost path:/user/query result:{"code":0,"data":{"op":"phone","userid":"userid_13212345678"}}
+2017-11-10 15:31 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 15:31 +08:00: [36m[2017-11-10 15:31:13.725] [DEBUG] logInfo - [39mPOST /admin/user 200
+2017-11-10 15:34 +08:00: ---POST_/admin/user
+2017-11-10 15:34 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+---requstPSPost path:/user/query data:{"op":"phone","phone":"13212345678"}
+2017-11-10 15:34 +08:00: ---POST_/user/query
+2017-11-10 15:34 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+2017-11-10 15:34 +08:00: phone: 13212345678
+2017-11-10 15:34 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 15:34 +08:00: [36m[2017-11-10 15:34:36.950] [DEBUG] logInfo - [39mPOST /user/query 200
+2017-11-10 15:34 +08:00: ---response requstPSPost path:/user/query result:{"code":0,"data":{"op":"phone","userid":"userid_13212345678"}}
+---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+[36m[2017-11-10 15:34:36.953] [DEBUG] logInfo - [39mPOST /admin/user 200
+2017-11-10 15:38 +08:00: [32m[2017-11-10 15:38:33.544] [INFO] /dao/dao.js - [39m---连接数据库 类型:default 参数:{"host":"127.0.0.1","user":"root","password":"890503","database":"poem","port":3306,"multipleStatements":true}
+2017-11-10 15:38 +08:00: true
+2017-11-10 15:38 +08:00: Example app listening at http://:::3000
+2017-11-10 15:38 +08:00: ---POST_/admin/user
+2017-11-10 15:38 +08:00: ---body:{"op":"phone","phone":"1321234567"}
+---requstPSPost path:/user/query data:{"op":"phone","phone":"1321234567"}
+2017-11-10 15:38 +08:00: ---POST_/user/query
+2017-11-10 15:38 +08:00: ---body:{"op":"phone","phone":"1321234567"}
+phone: 1321234567
+2017-11-10 15:38 +08:00: [36m[2017-11-10 15:38:40.999] [DEBUG] logInfo - [39mPOST /user/query 200
+2017-11-10 15:38 +08:00: ---response requstPSPost path:/user/query result:{"code":1,"errmsg":"手机号未组成"}
+2017-11-10 15:38 +08:00: [36m[2017-11-10 15:38:41.005] [DEBUG] logInfo - [39mPOST /admin/user 200
+2017-11-10 16:00 +08:00: ---POST_/admin/user
+2017-11-10 16:00 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+2017-11-10 16:00 +08:00: ---requstPSPost path:/user/query data:{"op":"phone","phone":"13212345678"}
+2017-11-10 16:00 +08:00: ---POST_/user/query
+---body:{"op":"phone","phone":"13212345678"}
+2017-11-10 16:00 +08:00: phone: 13212345678
+2017-11-10 16:00 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 16:00 +08:00: [36m[2017-11-10 16:00:12.976] [DEBUG] logInfo - [39mPOST /user/query 200
+2017-11-10 16:00 +08:00: ---response requstPSPost path:/user/query result:{"code":0,"data":{"op":"phone","userid":"userid_13212345678"}}
+2017-11-10 16:00 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 16:00 +08:00: [36m[2017-11-10 16:00:12.979] [DEBUG] logInfo - [39mPOST /admin/user 200
+2017-11-10 16:08 +08:00: ---POST_/poem/newestallpoem
+2017-11-10 16:08 +08:00: ---body:{"id":0,"userid":""}
+2017-11-10 16:08 +08:00: ---res succes--- data: [ RowDataPacket {
+    id: 65,
+    userid: 'userid_13212345676',
+    title: '1321234567',
+    content: '12345676',
+    lovenum: 0,
+    commentnum: 0,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    time: 1509974689,
+    mylove: 0 },
+  RowDataPacket {
+    id: 64,
+    userid: 'userid_13671172337',
+    title: '你好',
+    content: '1\nw\nert\nr\nt\nd\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\n\nD\nF\nD\nD\n\nD\nD\n\nDid\n\nD',
+    lovenum: 0,
+    commentnum: 20,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    time: 1508946456,
+    mylove: 0 },
+  RowDataPacket {
+    id: 63,
+    userid: 'userid_13112345671',
+    title: '2',
+    content: '2',
+    lovenum: 0,
+    commentnum: 1,
+    head: 'e1dc2d16cd7a666714a2ea9e986d05f8',
+    pseudonym: '71',
+    time: 1508945681,
+    mylove: 0 },
+  RowDataPacket {
+    id: 62,
+    userid: 'userid_13112345671',
+    title: '1',
+    content: '1',
+    lovenum: 0,
+    commentnum: 0,
+    head: 'e1dc2d16cd7a666714a2ea9e986d05f8',
+    pseudonym: '71',
+    time: 1508945659,
+    mylove: 0 },
+  RowDataPacket {
+    id: 61,
+    userid: 'userid_13112345671',
+    title: '1',
+    content: '1',
+    lovenum: 0,
+    commentnum: 0,
+    head: 'e1dc2d16cd7a666714a2ea9e986d05f8',
+    pseudonym: '71',
+    time: 1508945630,
+    mylove: 0 },
+  RowDataPacket {
+    id: 60,
+    userid: 'userid_13112345671',
+    title: 'Assad’s',
+    content: 'Asdasd',
+    lovenum: 0,
+    commentnum: 0,
+    head: 'e1dc2d16cd7a666714a2ea9e986d05f8',
+    pseudonym: '71',
+    time: 1508945469,
+    mylove: 0 },
+  RowDataPacket {
+    id: 59,
+    userid: 'userid_13671172337',
+    title: '实打实打算的',
+    content: '撒打算打\n哈哈哈哈哈\n哥哥噶师大',
+    lovenum: 1,
+    commentnum: 7,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    time: 1508306878,
+    mylove: 0 },
+  RowDataPacket {
+    id: 58,
+    userid: 'userid_13671172337',
+    title: 'Gf',
+    content: 'Gh',
+    lovenum: 2,
+    commentnum: 1,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    time: 1508306250,
+    mylove: 0 } ]
+2017-11-10 16:08 +08:00: [36m[2017-11-10 16:08:30.337] [DEBUG] logInfo - [39mPOST /poem/newestallpoem 200
+2017-11-10 16:08 +08:00: url:/pimage/pimage/file/50fca5a28ff53e7b26338bc02d144c2d body:{}
+2017-11-10 16:08 +08:00: fileName:50fca5a28ff53e7b26338bc02d144c2d
+url:/pimage/pimage/file/e1dc2d16cd7a666714a2ea9e986d05f8 body:{}
+fileName:e1dc2d16cd7a666714a2ea9e986d05f8
+2017-11-10 16:08 +08:00: url:/pimage/pimage/file/04ebfc8602015b0b4033e18c56548735 body:{}
+2017-11-10 16:08 +08:00: fileName:04ebfc8602015b0b4033e18c56548735
+2017-11-10 16:08 +08:00: [36m[2017-11-10 16:08:33.421] [DEBUG] logInfo - [39mGET /pimage/file/50fca5a28ff53e7b26338bc02d144c2d 200
+2017-11-10 16:08 +08:00: [36m[2017-11-10 16:08:34.721] [DEBUG] logInfo - [39mGET /pimage/file/e1dc2d16cd7a666714a2ea9e986d05f8 200
+2017-11-10 16:08 +08:00: [36m[2017-11-10 16:08:34.725] [DEBUG] logInfo - [39mGET /pimage/file/04ebfc8602015b0b4033e18c56548735 200
+2017-11-10 16:09 +08:00: ---POST_/poem/info
+2017-11-10 16:09 +08:00: ---body:{"pid":64,"userid":""}
+2017-11-10 16:09 +08:00: ---POST_/poem/newestcomment
+2017-11-10 16:09 +08:00: ---body:{"id":0,"pid":64}
+2017-11-10 16:09 +08:00: ---POST_/poem/getloves
+2017-11-10 16:09 +08:00: ---body:{"id":64}
+2017-11-10 16:09 +08:00: RowDataPacket {
+  id: 64,
+  title: '你好',
+  content: '1\nw\nert\nr\nt\nd\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\n\nD\nF\nD\nD\n\nD\nD\n\nDid\n\nD',
+  userid: 'userid_13671172337',
+  time: 1508946456,
+  lovenum: 0,
+  commentnum: 20,
+  del: 0,
+  love: 0 }
+2017-11-10 16:09 +08:00: ---res succes--- data: RowDataPacket {
+  id: 64,
+  title: '你好',
+  content: '1\nw\nert\nr\nt\nd\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\n\nD\nF\nD\nD\n\nD\nD\n\nDid\n\nD',
+  userid: 'userid_13671172337',
+  time: 1508946456,
+  lovenum: 0,
+  commentnum: 20,
+  del: 0,
+  love: 0 }
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:09.485] [DEBUG] logInfo - [39mPOST /poem/info 200
+2017-11-10 16:09 +08:00: ---res succes--- data: []
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:09.497] [DEBUG] logInfo - [39mPOST /poem/getloves 200
+2017-11-10 16:09 +08:00: ---res succes--- data: [ RowDataPacket {
+    id: 30,
+    userid: 'userid_13671172337',
+    cid: 28,
+    cuserid: 'userid_13212345676',
+    comment: '12',
+    pid: 64,
+    del: 0,
+    time: 1509928981,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 29,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: 'qq',
+    pid: 64,
+    del: 0,
+    time: 1509881744,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 28,
+    userid: 'userid_13212345676',
+    cid: 27,
+    cuserid: 'userid_13212345676',
+    comment: 'hihi',
+    pid: 64,
+    del: 0,
+    time: 1509864078,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 27,
+    userid: 'userid_13212345676',
+    cid: 26,
+    cuserid: 'userid_13212345676',
+    comment: 'haha',
+    pid: 64,
+    del: 0,
+    time: 1509863906,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 26,
+    userid: 'userid_13212345676',
+    cid: 25,
+    cuserid: 'userid_13212345676',
+    comment: 'asdasdasd',
+    pid: 64,
+    del: 0,
+    time: 1509863816,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 25,
+    userid: 'userid_13212345676',
+    cid: 24,
+    cuserid: 'userid_13212345676',
+    comment: 'qweqwe',
+    pid: 64,
+    del: 0,
+    time: 1509863593,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 24,
+    userid: 'userid_13212345676',
+    cid: 22,
+    cuserid: 'userid_13212345676',
+    comment: '11',
+    pid: 64,
+    del: 0,
+    time: 1509863443,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 23,
+    userid: 'userid_13212345676',
+    cid: 22,
+    cuserid: 'userid_13212345676',
+    comment: '123456',
+    pid: 64,
+    del: 0,
+    time: 1509863379,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 22,
+    userid: 'userid_13212345676',
+    cid: 0,
+    cuserid: '',
+    comment: '123',
+    pid: 64,
+    del: 0,
+    time: 1509862764,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 21,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '\t\tqwe',
+    pid: 64,
+    del: 0,
+    time: 1509862714,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 20,
+    userid: 'userid_13212345676',
+    cid: 17,
+    cuserid: 'userid_13212345676',
+    comment: 'asdasd',
+    pid: 64,
+    del: 0,
+    time: 1509859451,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 17,
+    userid: 'userid_13212345676',
+    cid: 15,
+    cuserid: 'userid_13212345676',
+    comment: 'asasa1111',
+    pid: 64,
+    del: 0,
+    time: 1509854430,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 16,
+    userid: 'userid_13212345676',
+    cid: 15,
+    cuserid: 'userid_13212345676',
+    comment: '123',
+    pid: 64,
+    del: 0,
+    time: 1509853997,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 15,
+    userid: 'userid_13212345676',
+    cid: 0,
+    cuserid: '',
+    comment: 'p3',
+    pid: 64,
+    del: 0,
+    time: 1509853935,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 14,
+    userid: 'userid_13212345676',
+    cid: 0,
+    cuserid: '',
+    comment: 'p1',
+    pid: 64,
+    del: 0,
+    time: 1509853866,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 13,
+    userid: 'userid_13212345676',
+    cid: 0,
+    cuserid: '',
+    comment: 'asd',
+    pid: 64,
+    del: 0,
+    time: 1509853662,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 12,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '213123',
+    pid: 64,
+    del: 0,
+    time: 1509029067,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 11,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '33',
+    pid: 64,
+    del: 0,
+    time: 1509029059,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 10,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '22',
+    pid: 64,
+    del: 0,
+    time: 1509029054,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 9,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '11',
+    pid: 64,
+    del: 0,
+    time: 1509029049,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null } ]
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:09.517] [DEBUG] logInfo - [39mPOST /poem/newestcomment 200
+2017-11-10 16:09 +08:00: ---POST_/poem/newestcomment
+2017-11-10 16:09 +08:00: ---body:{"id":30,"pid":64}
+2017-11-10 16:09 +08:00: ---res succes--- data: []
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:12.052] [DEBUG] logInfo - [39mPOST /poem/newestcomment 200
+2017-11-10 16:09 +08:00: ---POST_/poem/newestcomment
+---body:{"id":30,"pid":64}
+2017-11-10 16:09 +08:00: ---res succes--- data: []
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:12.513] [DEBUG] logInfo - [39mPOST /poem/newestcomment 200
+2017-11-10 16:09 +08:00: ---POST_/poem/getloves
+2017-11-10 16:09 +08:00: ---body:{"id":65}
+2017-11-10 16:09 +08:00: ---POST_/poem/info
+2017-11-10 16:09 +08:00: ---body:{"pid":65,"userid":""}
+2017-11-10 16:09 +08:00: ---POST_/poem/newestcomment
+2017-11-10 16:09 +08:00: ---body:{"id":0,"pid":65}
+2017-11-10 16:09 +08:00: RowDataPacket {
+  id: 65,
+  title: '1321234567',
+  content: '12345676',
+  userid: 'userid_13212345676',
+  time: 1509974689,
+  lovenum: 0,
+  commentnum: 0,
+  del: 0,
+  love: 0 }
+2017-11-10 16:09 +08:00: ---res succes--- data: RowDataPacket {
+  id: 65,
+  title: '1321234567',
+  content: '12345676',
+  userid: 'userid_13212345676',
+  time: 1509974689,
+  lovenum: 0,
+  commentnum: 0,
+  del: 0,
+  love: 0 }
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:14.710] [DEBUG] logInfo - [39mPOST /poem/info 200
+2017-11-10 16:09 +08:00: ---res succes--- data: []
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:14.718] [DEBUG] logInfo - [39mPOST /poem/getloves 200
+2017-11-10 16:09 +08:00: ---res succes--- data: []
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:14.726] [DEBUG] logInfo - [39mPOST /poem/newestcomment 200
+2017-11-10 16:09 +08:00: ---POST_/user/login
+2017-11-10 16:09 +08:00: ---body:{"phone":"13671172337","password":"123456","os":"android"}
+2017-11-10 16:09 +08:00: phone: 13671172337
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:40.209] [DEBUG] logInfo - [39mPOST /user/login 200
+2017-11-10 16:09 +08:00: ---POST_/user/validate
+2017-11-10 16:09 +08:00: ---body:{"phone":"13671172337","type":2}
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:50.265] [DEBUG] /routers/user.js - [39m验证码已经存在
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:50.265] [DEBUG] /routers/user.js - [39m重新生成验证码
+2017-11-10 16:09 +08:00: updateValidate:305529phone:13671172337
+2017-11-10 16:09 +08:00: ---res succes--- data: { phone: '13671172337',
+  type: 2,
+  code: '305529',
+  time: 60,
+  max: 60 }
+2017-11-10 16:09 +08:00: [36m[2017-11-10 16:09:50.288] [DEBUG] /routers/user.js - [39m------验证码为:305529------
+2017-11-10 16:09 +08:00: [32m[2017-11-10 16:09:50.288] [INFO] /routers/user.js - [39m---发送短信验证码 type:2 phone:13671172337 code:305529
+[36m[2017-11-10 16:09:50.289] [DEBUG] logInfo - [39mPOST /user/validate 200
+2017-11-10 16:10 +08:00: ---POST_/user/forget
+---body:{"phone":"13671172337","password":"1","code":"305529","os":"android"}
+2017-11-10 16:10 +08:00: phone: 13671172337
+2017-11-10 16:10 +08:00: ---res succes--- data: { phone: '13671172337', passwrod: '1' }
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:08.349] [DEBUG] logInfo - [39mPOST /user/forget 200
+2017-11-10 16:10 +08:00: ---POST_/user/login
+---body:{"phone":"13671172337","password":"1","os":"android"}
+2017-11-10 16:10 +08:00: phone: 13671172337
+2017-11-10 16:10 +08:00: ---res succes--- data: RowDataPacket {
+  id: 1,
+  phone: '13671172337',
+  password: '1',
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  os: 'ios' }
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:15.263] [DEBUG] logInfo - [39mPOST /user/login 200
+2017-11-10 16:10 +08:00: ---POST_/poem/newestallpoem
+2017-11-10 16:10 +08:00: ---body:{"id":65,"userid":""}
+2017-11-10 16:10 +08:00: ---res succes--- data: []
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:18.843] [DEBUG] logInfo - [39mPOST /poem/newestallpoem 200
+2017-11-10 16:10 +08:00: ---POST_/poem/info
+---body:{"pid":60,"userid":"userid_13671172337"}
+2017-11-10 16:10 +08:00: ---POST_/poem/getloves
+2017-11-10 16:10 +08:00: ---body:{"id":60}
+2017-11-10 16:10 +08:00: ---POST_/poem/newestcomment
+2017-11-10 16:10 +08:00: ---body:{"id":0,"pid":60}
+2017-11-10 16:10 +08:00: RowDataPacket {
+  id: 60,
+  title: 'Assad’s',
+  content: 'Asdasd',
+  userid: 'userid_13112345671',
+  time: 1508945469,
+  lovenum: 0,
+  commentnum: 0,
+  del: 0,
+  love: 0 }
+2017-11-10 16:10 +08:00: ---res succes--- data: RowDataPacket {
+  id: 60,
+  title: 'Assad’s',
+  content: 'Asdasd',
+  userid: 'userid_13112345671',
+  time: 1508945469,
+  lovenum: 0,
+  commentnum: 0,
+  del: 0,
+  love: 0 }
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:23.976] [DEBUG] logInfo - [39mPOST /poem/info 200
+2017-11-10 16:10 +08:00: ---res succes--- data: []
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:23.977] [DEBUG] logInfo - [39mPOST /poem/getloves 200
+2017-11-10 16:10 +08:00: ---res succes--- data: []
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:23.979] [DEBUG] logInfo - [39mPOST /poem/newestcomment 200
+2017-11-10 16:10 +08:00: ---POST_/poem/commentpoem
+2017-11-10 16:10 +08:00: ---body:{"id":60,"userid":"userid_13671172337","comment":"不炒"}
+2017-11-10 16:10 +08:00: ---res succes--- data: RowDataPacket {
+  id: 31,
+  userid: 'userid_13671172337',
+  cid: 0,
+  cuserid: '',
+  comment: '不炒',
+  pid: 60,
+  del: 0,
+  time: 1510301429,
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  chead: '',
+  cpseudonym: '' }
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.868] [DEBUG] logInfo - [39mPOST /poem/commentpoem 200
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.871] [DEBUG] /dao/poemDao.js - [39m---sql0---
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.873] [DEBUG] /dao/poemDao.js - [39muserid_13112345671
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.873] [DEBUG] /dao/poemDao.js - [39m---sql1---
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.874] [DEBUG] /dao/poemDao.js - [39m---sql2---
+2017-11-10 16:10 +08:00: ---requstPSPost path:/message/actionmsg data:{"type":2,"userid":"userid_13112345671","title":"有人评论了你的作品","content":"136评论:不炒","extend":{"title":"Assad’s","userid":"userid_13671172337","head":"50fca5a28ff53e7b26338bc02d144c2d","pseudonym":"136","pid":60,"cid":"","comment":"不炒"}}
+2017-11-10 16:10 +08:00: ---POST_/message/actionmsg
+2017-11-10 16:10 +08:00: ---body:{"type":2,"userid":"userid_13112345671","title":"有人评论了你的作品","content":"136评论:不炒","extend":{"title":"Assad’s","userid":"userid_13671172337","head":"50fca5a28ff53e7b26338bc02d144c2d","pseudonym":"136","pid":60,"cid":"","comment":"不炒"}}
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.884] [DEBUG] /dao/messageDao.js - [39mstring
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.884] [DEBUG] /dao/messageDao.js - [39m{"title":"Assad’s","userid":"userid_13671172337","head":"50fca5a28ff53e7b26338bc02d144c2d","pseudonym":"136","pid":60,"cid":"","comment":"不炒"}
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.896] [DEBUG] logInfo - [39mPOST /message/actionmsg 200
+2017-11-10 16:10 +08:00: ---response requstPSPost path:/message/actionmsg result:{"code":1,"errmsg":{}}
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.899] [DEBUG] /routers/poem.js - [39mError: {"code":1,"errmsg":{}}
+    at IncomingMessage.<anonymous> (/Users/bingbing/Poem/PoemServer/utils/httputil.js:34:26)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:122:9)
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.909] [DEBUG] /routers/poem.js - [39mnull
+2017-11-10 16:10 +08:00: ---POST_/poem/lovecomment
+2017-11-10 16:10 +08:00: ---body:{"pid":60}
+2017-11-10 16:10 +08:00: ---res succes--- data: RowDataPacket { id: 60, lovenum: 0, commentnum: 1 }
+2017-11-10 16:10 +08:00: [36m[2017-11-10 16:10:29.992] [DEBUG] logInfo - [39mPOST /poem/lovecomment 200
+2017-11-10 16:13 +08:00: ---POST_/poem/newestallpoem
+2017-11-10 16:13 +08:00: ---body:{"id":65,"userid":""}
+2017-11-10 16:13 +08:00: ---res succes--- data: []
+2017-11-10 16:13 +08:00: [36m[2017-11-10 16:13:12.863] [DEBUG] logInfo - [39mPOST /poem/newestallpoem 200
+2017-11-10 16:13 +08:00: ---POST_/user/info
+2017-11-10 16:13 +08:00: ---body:{"userid":"userid_13671172337"}
+2017-11-10 16:13 +08:00: SELECT user.userid,user.head,user.pseudonym FROM user WHERE userid = "userid_13671172337"; SELECT COUNT(*) AS count FROM follow WHERE userid = "userid_13671172337" AND fstate = 1; SELECT COUNT(*) AS count FROM follow WHERE userid = "userid_13671172337" AND tstate = 1
+2017-11-10 16:13 +08:00: [32m[2017-11-10 16:13:15.359] [INFO] /routers/user.js - [39m------用户信息------
+2017-11-10 16:13 +08:00: [32m[2017-11-10 16:13:15.359] [INFO] /routers/user.js - [39mRowDataPacket {
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  myfollow: 1,
+  followme: 1 }
+2017-11-10 16:13 +08:00: [32m[2017-11-10 16:13:15.360] [INFO] /routers/user.js - [39m------用户信息------
+2017-11-10 16:13 +08:00: ---res succes--- data: RowDataPacket {
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  myfollow: 1,
+  followme: 1 }
+2017-11-10 16:13 +08:00: [36m[2017-11-10 16:13:15.361] [DEBUG] logInfo - [39mPOST /user/info 200
+2017-11-10 16:13 +08:00: ---POST_/message/pushid
+---body:{"userid":"userid_13671172337","pushid":"100d855909432a851d9","os":"android"}
+2017-11-10 16:13 +08:00: ---POST_/message/messages
+---body:{"userid":"userid_13671172337"}
+2017-11-10 16:13 +08:00: ---res succes--- data: []
+2017-11-10 16:13 +08:00: [36m[2017-11-10 16:13:15.642] [DEBUG] logInfo - [39mPOST /message/messages 200
+2017-11-10 16:13 +08:00: ---res succes--- data: { userid: 'userid_13671172337',
+  pushid: '100d855909432a851d9',
+  os: 'android' }
+2017-11-10 16:13 +08:00: [36m[2017-11-10 16:13:15.647] [DEBUG] logInfo - [39mPOST /message/pushid 200
+2017-11-10 18:44 +08:00: ---POST_/admin/user
+2017-11-10 18:44 +08:00: ---body:{"op":"phone","phone":"13212345678"}
+2017-11-10 18:44 +08:00: ---requstPSPost path:/user/query data:{"op":"phone","phone":"13212345678"}
+2017-11-10 18:44 +08:00: ---POST_/user/query
+---body:{"op":"phone","phone":"13212345678"}
+2017-11-10 18:44 +08:00: phone: 13212345678
+2017-11-10 18:44 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 18:44 +08:00: [36m[2017-11-10 18:44:26.342] [DEBUG] logInfo - [39mPOST /user/query 200
+2017-11-10 18:44 +08:00: ---response requstPSPost path:/user/query result:{"code":0,"data":{"op":"phone","userid":"userid_13212345678"}}
+2017-11-10 18:44 +08:00: ---res succes--- data: { op: 'phone', userid: 'userid_13212345678' }
+2017-11-10 18:44 +08:00: [36m[2017-11-10 18:44:26.347] [DEBUG] logInfo - [39mPOST /admin/user 200
+2017-11-10 19:18 +08:00: ---POST_/poem/newestallpoem
+2017-11-10 19:18 +08:00: ---body:{"id":65,"userid":""}
+2017-11-10 19:18 +08:00: ---res succes--- data: []
+2017-11-10 19:18 +08:00: [36m[2017-11-10 19:18:52.578] [DEBUG] logInfo - [39mPOST /poem/newestallpoem 200
+2017-11-10 19:18 +08:00: ---POST_/user/info
+2017-11-10 19:18 +08:00: ---body:{"userid":"userid_13671172337"}
+SELECT user.userid,user.head,user.pseudonym FROM user WHERE userid = "userid_13671172337"; SELECT COUNT(*) AS count FROM follow WHERE userid = "userid_13671172337" AND fstate = 1; SELECT COUNT(*) AS count FROM follow WHERE userid = "userid_13671172337" AND tstate = 1
+2017-11-10 19:18 +08:00: [32m[2017-11-10 19:18:53.228] [INFO] /routers/user.js - [39m------用户信息------
+2017-11-10 19:18 +08:00: [32m[2017-11-10 19:18:53.229] [INFO] /routers/user.js - [39mRowDataPacket {
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  myfollow: 1,
+  followme: 1 }
+2017-11-10 19:18 +08:00: [32m[2017-11-10 19:18:53.233] [INFO] /routers/user.js - [39m------用户信息------
+2017-11-10 19:18 +08:00: ---res succes--- data: RowDataPacket {
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  myfollow: 1,
+  followme: 1 }
+2017-11-10 19:18 +08:00: [36m[2017-11-10 19:18:53.248] [DEBUG] logInfo - [39mPOST /user/info 200
+2017-11-10 19:18 +08:00: ---POST_/message/messages
+2017-11-10 19:18 +08:00: ---body:{"userid":"userid_13671172337"}
+2017-11-10 19:18 +08:00: ---res succes--- data: []
+2017-11-10 19:18 +08:00: [36m[2017-11-10 19:18:54.717] [DEBUG] logInfo - [39mPOST /message/messages 200
+2017-11-10 19:19 +08:00: ---POST_/poem/newestallpoem
+2017-11-10 19:19 +08:00: ---body:{"id":65,"userid":""}
+2017-11-10 19:19 +08:00: ---res succes--- data: []
+2017-11-10 19:19 +08:00: [36m[2017-11-10 19:19:52.071] [DEBUG] logInfo - [39mPOST /poem/newestallpoem 200
+2017-11-10 19:19 +08:00: ---POST_/user/info
+2017-11-10 19:19 +08:00: ---body:{"userid":"userid_13671172337"}
+SELECT user.userid,user.head,user.pseudonym FROM user WHERE userid = "userid_13671172337"; SELECT COUNT(*) AS count FROM follow WHERE userid = "userid_13671172337" AND fstate = 1; SELECT COUNT(*) AS count FROM follow WHERE userid = "userid_13671172337" AND tstate = 1
+2017-11-10 19:19 +08:00: [32m[2017-11-10 19:19:53.972] [INFO] /routers/user.js - [39m------用户信息------
+2017-11-10 19:19 +08:00: [32m[2017-11-10 19:19:53.980] [INFO] /routers/user.js - [39mRowDataPacket {
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  myfollow: 1,
+  followme: 1 }
+2017-11-10 19:19 +08:00: [32m[2017-11-10 19:19:53.986] [INFO] /routers/user.js - [39m------用户信息------
+---res succes--- data: RowDataPacket {
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  myfollow: 1,
+  followme: 1 }
+[36m[2017-11-10 19:19:53.987] [DEBUG] logInfo - [39mPOST /user/info 200
+2017-11-10 19:19 +08:00: ---POST_/message/messages
+2017-11-10 19:19 +08:00: ---body:{"userid":"userid_13671172337"}
+2017-11-10 19:19 +08:00: ---res succes--- data: []
+2017-11-10 19:19 +08:00: [36m[2017-11-10 19:19:54.233] [DEBUG] logInfo - [39mPOST /message/messages 200
+2017-11-10 19:19 +08:00: ---POST_/message/pushid
+2017-11-10 19:19 +08:00: ---body:{"userid":"userid_13671172337","pushid":"100d855909432a851d9","os":"android"}
+2017-11-10 19:19 +08:00: ---res succes--- data: { userid: 'userid_13671172337',
+  pushid: '100d855909432a851d9',
+  os: 'android' }
+2017-11-10 19:19 +08:00: [36m[2017-11-10 19:19:54.451] [DEBUG] logInfo - [39mPOST /message/pushid 200
+2017-11-10 20:11 +08:00: ---POST_/poem/newestallpoem
+2017-11-10 20:11 +08:00: ---body:{"id":65,"userid":""}
+2017-11-10 20:11 +08:00: ---res succes--- data: []
+2017-11-10 20:11 +08:00: [36m[2017-11-10 20:11:47.224] [DEBUG] logInfo - [39mPOST /poem/newestallpoem 200
+2017-11-10 20:11 +08:00: ---POST_/user/info
+2017-11-10 20:11 +08:00: ---body:{"userid":"userid_13671172337"}
+SELECT user.userid,user.head,user.pseudonym FROM user WHERE userid = "userid_13671172337"; SELECT COUNT(*) AS count FROM follow WHERE userid = "userid_13671172337" AND fstate = 1; SELECT COUNT(*) AS count FROM follow WHERE userid = "userid_13671172337" AND tstate = 1
+2017-11-10 20:11 +08:00: [32m[2017-11-10 20:11:48.380] [INFO] /routers/user.js - [39m------用户信息------
+2017-11-10 20:11 +08:00: [32m[2017-11-10 20:11:48.380] [INFO] /routers/user.js - [39mRowDataPacket {
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  myfollow: 1,
+  followme: 1 }
+2017-11-10 20:11 +08:00: [32m[2017-11-10 20:11:48.381] [INFO] /routers/user.js - [39m------用户信息------
+2017-11-10 20:11 +08:00: ---res succes--- data: RowDataPacket {
+  userid: 'userid_13671172337',
+  head: '50fca5a28ff53e7b26338bc02d144c2d',
+  pseudonym: '136',
+  myfollow: 1,
+  followme: 1 }
+2017-11-10 20:11 +08:00: [36m[2017-11-10 20:11:48.387] [DEBUG] logInfo - [39mPOST /user/info 200
+2017-11-10 20:11 +08:00: ---POST_/message/pushid
+---body:{"userid":"userid_13671172337","pushid":"100d855909432a851d9","os":"android"}
+2017-11-10 20:11 +08:00: ---POST_/message/messages
+2017-11-10 20:11 +08:00: ---body:{"userid":"userid_13671172337"}
+2017-11-10 20:11 +08:00: ---res succes--- data: { userid: 'userid_13671172337',
+  pushid: '100d855909432a851d9',
+  os: 'android' }
+2017-11-10 20:11 +08:00: [36m[2017-11-10 20:11:49.125] [DEBUG] logInfo - [39mPOST /message/pushid 200
+2017-11-10 20:11 +08:00: ---res succes--- data: []
+[36m[2017-11-10 20:11:49.129] [DEBUG] logInfo - [39mPOST /message/messages 200
+2017-11-10 20:12 +08:00: ---POST_/poem/info
+2017-11-10 20:12 +08:00: ---body:{"pid":64,"userid":"userid_13671172337"}
+2017-11-10 20:12 +08:00: ---POST_/poem/getloves
+---body:{"id":64}
+2017-11-10 20:12 +08:00: ---POST_/poem/newestcomment
+---body:{"id":0,"pid":64}
+2017-11-10 20:12 +08:00: RowDataPacket {
+  id: 64,
+  title: '你好',
+  content: '1\nw\nert\nr\nt\nd\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\n\nD\nF\nD\nD\n\nD\nD\n\nDid\n\nD',
+  userid: 'userid_13671172337',
+  time: 1508946456,
+  lovenum: 0,
+  commentnum: 20,
+  del: 0,
+  love: 0 }
+2017-11-10 20:12 +08:00: ---res succes--- data: RowDataPacket {
+  id: 64,
+  title: '你好',
+  content: '1\nw\nert\nr\nt\nd\nF\nF\nF\nF\nF\nF\nF\nF\nF\nF\n\nD\nF\nD\nD\n\nD\nD\n\nDid\n\nD',
+  userid: 'userid_13671172337',
+  time: 1508946456,
+  lovenum: 0,
+  commentnum: 20,
+  del: 0,
+  love: 0 }
+2017-11-10 20:12 +08:00: [36m[2017-11-10 20:12:13.220] [DEBUG] logInfo - [39mPOST /poem/info 200
+2017-11-10 20:12 +08:00: ---res succes--- data: []
+2017-11-10 20:12 +08:00: [36m[2017-11-10 20:12:13.244] [DEBUG] logInfo - [39mPOST /poem/getloves 200
+2017-11-10 20:12 +08:00: ---res succes--- data: [ RowDataPacket {
+    id: 30,
+    userid: 'userid_13671172337',
+    cid: 28,
+    cuserid: 'userid_13212345676',
+    comment: '12',
+    pid: 64,
+    del: 0,
+    time: 1509928981,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 29,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: 'qq',
+    pid: 64,
+    del: 0,
+    time: 1509881744,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 28,
+    userid: 'userid_13212345676',
+    cid: 27,
+    cuserid: 'userid_13212345676',
+    comment: 'hihi',
+    pid: 64,
+    del: 0,
+    time: 1509864078,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 27,
+    userid: 'userid_13212345676',
+    cid: 26,
+    cuserid: 'userid_13212345676',
+    comment: 'haha',
+    pid: 64,
+    del: 0,
+    time: 1509863906,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 26,
+    userid: 'userid_13212345676',
+    cid: 25,
+    cuserid: 'userid_13212345676',
+    comment: 'asdasdasd',
+    pid: 64,
+    del: 0,
+    time: 1509863816,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 25,
+    userid: 'userid_13212345676',
+    cid: 24,
+    cuserid: 'userid_13212345676',
+    comment: 'qweqwe',
+    pid: 64,
+    del: 0,
+    time: 1509863593,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 24,
+    userid: 'userid_13212345676',
+    cid: 22,
+    cuserid: 'userid_13212345676',
+    comment: '11',
+    pid: 64,
+    del: 0,
+    time: 1509863443,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 23,
+    userid: 'userid_13212345676',
+    cid: 22,
+    cuserid: 'userid_13212345676',
+    comment: '123456',
+    pid: 64,
+    del: 0,
+    time: 1509863379,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 22,
+    userid: 'userid_13212345676',
+    cid: 0,
+    cuserid: '',
+    comment: '123',
+    pid: 64,
+    del: 0,
+    time: 1509862764,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 21,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '\t\tqwe',
+    pid: 64,
+    del: 0,
+    time: 1509862714,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 20,
+    userid: 'userid_13212345676',
+    cid: 17,
+    cuserid: 'userid_13212345676',
+    comment: 'asdasd',
+    pid: 64,
+    del: 0,
+    time: 1509859451,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 17,
+    userid: 'userid_13212345676',
+    cid: 15,
+    cuserid: 'userid_13212345676',
+    comment: 'asasa1111',
+    pid: 64,
+    del: 0,
+    time: 1509854430,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 16,
+    userid: 'userid_13212345676',
+    cid: 15,
+    cuserid: 'userid_13212345676',
+    comment: '123',
+    pid: 64,
+    del: 0,
+    time: 1509853997,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: '04ebfc8602015b0b4033e18c56548735',
+    cpseudonym: '13276' },
+  RowDataPacket {
+    id: 15,
+    userid: 'userid_13212345676',
+    cid: 0,
+    cuserid: '',
+    comment: 'p3',
+    pid: 64,
+    del: 0,
+    time: 1509853935,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 14,
+    userid: 'userid_13212345676',
+    cid: 0,
+    cuserid: '',
+    comment: 'p1',
+    pid: 64,
+    del: 0,
+    time: 1509853866,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 13,
+    userid: 'userid_13212345676',
+    cid: 0,
+    cuserid: '',
+    comment: 'asd',
+    pid: 64,
+    del: 0,
+    time: 1509853662,
+    head: '04ebfc8602015b0b4033e18c56548735',
+    pseudonym: '13276',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 12,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '213123',
+    pid: 64,
+    del: 0,
+    time: 1509029067,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 11,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '33',
+    pid: 64,
+    del: 0,
+    time: 1509029059,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 10,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '22',
+    pid: 64,
+    del: 0,
+    time: 1509029054,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null },
+  RowDataPacket {
+    id: 9,
+    userid: 'userid_13671172337',
+    cid: 0,
+    cuserid: '',
+    comment: '11',
+    pid: 64,
+    del: 0,
+    time: 1509029049,
+    head: '50fca5a28ff53e7b26338bc02d144c2d',
+    pseudonym: '136',
+    chead: null,
+    cpseudonym: null } ]
+2017-11-10 20:12 +08:00: [36m[2017-11-10 20:12:13.328] [DEBUG] logInfo - [39mPOST /poem/newestcomment 200
+2017-11-10 20:12 +08:00: ---POST_/poem/newestcomment
+2017-11-10 20:12 +08:00: ---body:{"id":30,"pid":64}
+2017-11-10 20:12 +08:00: ---res succes--- data: []
+2017-11-10 20:12 +08:00: [36m[2017-11-10 20:12:15.761] [DEBUG] logInfo - [39mPOST /poem/newestcomment 200
