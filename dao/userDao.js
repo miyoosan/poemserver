@@ -126,9 +126,9 @@ module.exports = {
 	},
 	// 查询验证 1注册验证码 2修改密码验证码
 	queryValidate:function(phone,type,callback){
-		var sql = 'SELECT * FROM validate WHERE phone = ? AND type = ?';
+		var sql = 'SELECT * FROM validate WHERE phone = "'+phone+'" AND type = '+type;
         pool.getConnection(function(err, connection) {
-            connection.query(sql, [phone,type], function(err, result) {
+            connection.query(sql, function(err, result) {
             	callback(err, result)
                 connection.release();
             });

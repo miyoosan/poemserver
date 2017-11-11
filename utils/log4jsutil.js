@@ -52,7 +52,8 @@ log4js.configure({
   },
   categories: {
     default: { appenders: ['out','file'], level: 'debug' }
-  }
+  },
+  pm2: true,
 })
 
 exports.logger = function (name, level) {

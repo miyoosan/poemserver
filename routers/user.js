@@ -183,7 +183,7 @@ router.post('/register',function(req,res,next){
 					ru.resError(res,'用户已经注册')
 				}else{
 					if(conf_validate){
-						userDao.queryValidate(phone,function(err,objs){
+						userDao.queryValidate(phone,1,function(err,objs){
 							if(err){
 								ru.resError(res,err);
 							}else{

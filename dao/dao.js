@@ -4,8 +4,6 @@ var mysqldb = require('../conf/config').server.mysqldb;
 var utils = require('../utils/utils');
 var logger = require('../utils/log4jsutil').logger(__dirname+'/dao.js');
 
-
-
 var dbconf = $conf.mysql;
 if(mysqldb == 'docker'){
 	dbconf = $conf.docker_mysql;
