@@ -10,11 +10,12 @@ var messageDao = require('../dao/messageDao');
 
 module.exports = {
 	sendAllPush:function(title,content,os,callback){
+	  logger.info('---发送极光推送')
+	  logger.info('---server.push:'+server.push);
 	  if(!server.push){
         callback(null,{sendno:'sendno',msg_id:'msg_id'});
         return
       } 
-	  logger.info('---发送极光推送')
 	  logger.info('---title:'+title)
 	  logger.info('---content:'+content)
 	  logger.info('---os:'+os)
@@ -51,6 +52,8 @@ module.exports = {
 	 * 发送单个推送
 	 */
 	sendPush:function(userid,msgid,title,content,pushtype,callback){
+      logger.info('---发送极光推送');
+	  logger.info('---server.push:'+server.push);
       if(!server.push){
         callback(null,{sendno:'sendno',msg_id:'msg_id'});
         return
@@ -60,12 +63,14 @@ module.exports = {
             logger.error(err)
             callback(err,null);
         }else{
+        	logger.info(result);
             if(result.length > 0){
               var push = result[0];
               var pushid =  push.pushid;
               var os = push.os;
+              logger.info('---push obj:'+pushid);
               if(pushid){
-              	  logger.info('---发送极光推送 msgid:'+msgid+' pushid:'+pushid+' os:'+os);
+              	  logger.info('--- msgid:'+msgid+' pushid:'+pushid+' os:'+os);
 				  logger.info('---title:'+title);
 				  logger.info('---content:'+content);
 				  logger.info('---pushtype:'+pushtype);
@@ -106,7 +111,7 @@ module.exports = {
 				  }
               } 
             }else{
-              callback(new Error('获取用户pushid失败'),null);
+              callback('获取用户pushid失败',null);
             }
         }
       }); 

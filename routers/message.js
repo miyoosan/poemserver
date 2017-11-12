@@ -23,7 +23,9 @@ function addMessage(message,callback){
     }else{
       if(result.length > 0 ){
           messageDao.addMessage(message.type,message.userid,message.title,message.content,message.extend,function(err,result){
+              logger.info('--------addMessage--------');
               if(err){
+                 logger.error(err);
                   callback(err,null);
               }else{
                   var msgid = result.insertId;
@@ -112,9 +114,9 @@ router.post('/pushuser', function(req, res, next) {
 router.post('/pushid',function(req,res,next){
   ru.logReq(req);
   var userid = req.body.userid;
-  var pushid = req.body.pushid;
-  var os = req.body.os||'all';
-  if(!userid||!pushid){
+  var pushid = req.body.pushid||'';
+  var os = req.body.os||'';
+  if(!userid){
     ru.resError(res,'参数错误');
   }else{
     messageDao.addPushId(userid,pushid,os,function(err,result){

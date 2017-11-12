@@ -83,7 +83,24 @@ router.post('/login',function(req,res,next){
 		}
 	})
 });
-
+router.post('/logout',function(req,res,next){
+	ru.logReq(req);
+	var userid = req.body.userid; 
+	if(!userid){
+		ru.resError(res,'参数错误');
+		return;
+	}
+	var push = {
+		userid:userid,
+	}
+	httputil.requstPSPost('/message/pushid',push,function(err,result){
+		if(err){
+			ru.resError(res,'参数错误');
+		}else{
+			ru.resSuccess(res,{userid:userid});
+		}
+	});
+});
 /**
  * 请求验证码
  */

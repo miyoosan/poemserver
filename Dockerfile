@@ -8,5 +8,5 @@ WORKDIR /sbb/www/poemserver
 COPY . /sbb/www/poemserver
 RUN npm install
  
-EXPOSE 3000
+EXPOSE 9001
 CMD [ "npm", "start" ]

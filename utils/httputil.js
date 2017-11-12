@@ -10,7 +10,7 @@ module.exports = {
 	    var opt = {  
 	        method: "POST",  
 	        host: 'localhost',  
-	        port: 3000,  
+	        port: 9001,  
 	        path: path,  
 	        headers: {  
 	            "Content-Type": 'application/json;charset=utf-8',  
@@ -52,7 +52,7 @@ module.exports = {
 	    var opt = {  
 	        method: "POST",  
 	        host: 'localhost',  
-	        port: 3001,  
+	        port: 9002,  
 	        path: path,  
 	        headers: {  
 	            "Content-Type": 'application/json;charset=utf-8',  
@@ -95,7 +95,7 @@ module.exports = {
 	    var opt = {  
 	        method: "POST",  
 	        host: 'localhost',  
-	        port: 3000,  
+	        port: 9001,  
 	        path: "/ali/sendcode",  
 	        headers: {  
 	            "Content-Type": 'application/json;charset=utf-8',  
