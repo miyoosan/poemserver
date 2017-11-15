@@ -270,7 +270,7 @@ router.post('/newestcomment', function(req, res, next) {
     var id = req.body.id;
     var pid = req.body.pid;
     if(!pid){
-    	resError(res,'参数错误');
+    	ru.resError(res,'参数错误');
     }else{
     	poemDao.queryNewestComment(id,pid,function(err,comments){
 	    	if(err){
