@@ -13,7 +13,9 @@ var {FollowExtend,Message,MessageType} = require('../utils/module');
 var jpush = require('../push/jpush');
 var conf_validate = require('../conf/config').server.validate;
 var conf_sms = require('../conf/config').server.sms;
-console.log(conf_validate)
+var deftext = require('../conf/deftext');
+logger.info(conf_validate)
+logger.info(deftext)
 /* GET user listing. */
 router.get('/', function(req, res, next) {
   //res.send('respond with a resource');
@@ -212,8 +214,8 @@ router.post('/register',function(req,res,next){
 												if(err){
 													ru.resError(res,err);
 												}else{
-													var title = '注册成功';
-												    var content = '欢迎来到Poem！';
+													var title = deftext.register_title;
+												    var content = deftext.register_content;
 													var data = {
 														type:0,
 														userid:userid,
@@ -243,8 +245,8 @@ router.post('/register',function(req,res,next){
 							if(err){
 								ru.resError(res,err);
 							}else{
-								var title = '注册成功';
-							    var content = '欢迎来到Poem！';
+								var title = deftext.register_title;
+								var content = deftext.register_content;
 								var data = {
 									type:0,
 									userid:userid,
