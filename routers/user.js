@@ -530,6 +530,24 @@ router.post('/query',function(req,res,next){
 		}
 	}
 });
-
+/**
+ *修改用户权限
+ */
+router.post('/permission',function(req,res,next){
+	ru.logReq(req);
+	var userid = req.body.userid;
+	var per = req.body.per;
+	if(!userid||!per){
+		resError(res,'参数错误');
+	}else{
+		userDao.updatPermission(userid,per,function(err,result){
+			if(err){
+				ru.resError(res,err);
+			}else{
+				ru.resSuccess(res,{userid:userid,per:per});
+			}
+		});
+	}
+});
 
 module.exports = router;

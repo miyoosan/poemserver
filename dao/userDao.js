@@ -31,7 +31,7 @@ module.exports = {
         });
     },
     queryUserInfo:function(userid,callback){
-        var userinfo = 'SELECT user.userid,user.head,user.pseudonym FROM '+USER_TABLE+' WHERE userid = "'+userid+'"';
+        var userinfo = 'SELECT user.userid,user.head,user.pseudonym,user.per FROM '+USER_TABLE+' WHERE userid = "'+userid+'"';
         var myfollow = ' SELECT COUNT(*) AS count FROM '+FOLLOW_TABLE+' WHERE userid = "'+userid+'" AND fstate = 1';
         var followme = ' SELECT COUNT(*) AS count FROM '+FOLLOW_TABLE+' WHERE userid = "'+userid+'" AND tstate = 1';
         var sql = userinfo+';'+myfollow+';'+followme;
@@ -288,5 +288,13 @@ module.exports = {
             });
         });
     },
-
+    updatPermission:function(userid,per,callback){
+        var sql = 'UPDATE user SET per = ?  WHERE userid = ? ';
+        pool.getConnection(function(err, connection) {
+            connection.query(sql, [per,userid], function(err, result) {
+                callback(err, result)
+                connection.release();
+            });
+        });
+    }
 }

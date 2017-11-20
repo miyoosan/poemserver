@@ -8,6 +8,7 @@ var fs = require('fs');
 var path = require('path'); 
 var crypto = require('crypto');
 var multiparty = require('multiparty');
+var gm = require('gm').subClass({imageMagick: true});;
 
 var ResJson = function(){
 	this.code;
@@ -109,11 +110,34 @@ router.post('/uploadimg', function(req, res, next){
             var file_md5_name = crypto.createHash('md5').update(file_name).digest('hex');
             var uploadedPath = inputFile.path;
             var dstPath = file_path + file_md5_name;
-            fs.rename(uploadedPath, dstPath, function(err) {
+            var bigPath = file_path + file_md5_name+'_big'
+            fs.rename(uploadedPath, bigPath, function(err) {
                 if(err){
                     resError(res,err);
                 } else {
-                    resSuccess(res,{name:file_md5_name});
+                      // console.log('------压缩图片')
+                      gm(bigPath)
+                              .size(function (err, size) {
+                                // console.log('---获取图片尺寸')
+                                // console.log(size)
+                                if (err){
+                                    resError(res,err);
+                                }else{
+                                  let zoom = 8;
+                                  let width = size.width/zoom;
+                                  let height = size.height/zoom;
+                                  gm(bigPath)
+                                  .resize(width, height)
+                                  .noProfile()
+                                  .write(dstPath, function (err) {
+                                    if (err){
+                                        resError(res,err);
+                                    }else{
+                                        resSuccess(res,{name:file_md5_name});
+                                    }
+                                  });
+                                }
+                     });
                 }
             });
         }
