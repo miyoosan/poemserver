@@ -303,8 +303,8 @@ router.post('/historycomment', function(req, res, next) {
     	resError(res,'参数错误');
     }else{
     	poemDao.queryHistoryComment(id,pid,function(err,comments){
-		 	logger.error(err)
 	    	if(err){
+			 	logger.error(err)
 	    		ru.resError(res,err);
 	    	}else{
 	    		ru.resSuccess(res,comments);
