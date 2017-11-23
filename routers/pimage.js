@@ -79,6 +79,7 @@ router.get('/file/:fileName', function(req, res, next) {
  // 实现文件下载 
  var fileName = req.params.fileName;
  console.log('fileName:'+fileName);
+ // console.log('----------------------------fileName:',fileName)
  var file_path = path.join(__dirname, '../images/');
  var filePath = path.join(file_path, fileName);
  var stats = fs.statSync(filePath); 

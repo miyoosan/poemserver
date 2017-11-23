@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 var ru = require('../utils/routersutil');
 var httputil = require('../utils/httputil');
-
-
+var poemDao = require('../dao/poemDao');
+var logger = require('../utils/log4jsutil').logger(__dirname+'/admin.js');
+var {DelPoemExtend,Message,MessageType} = require('../utils/module');
 router.get('/', function(req, res, next) {
 	ru.logReq(req);
     res.send('admin');
@@ -46,4 +47,39 @@ router.post('/pushuser', function(req, res, next) {
 	});
 });
 
+/**
+ * 违规删除帖子
+ */
+router.post('/delpoem', function(req, res, next) {
+  	ru.logReq(req);
+  	var id = req.body.id;
+  	var userid = req.body.userid;
+  	var reason = req.body.reason;
+  	if(!id||!reason){
+  		ru.resError(res,'参数错误')
+  	}else{
+  		poemDao.delPoem(id,userid,function(err,result){
+  			if(err){
+	    		ru.resError(res,err)
+	    	}else{
+	    		poemDao.queryPoemInfo(id,userid,function(err,poem){
+	    			if(err){
+	    				logger.error(err)
+	    			}else{
+	    				var title = '你的作品已被官方删除';
+					    var content = '你的作品['+poem.title+']已被官方删除，理由:'+reason;
+					    var delPoemExtend = new DelPoemExtend(poem.id);
+					    var message = new Message(MessageType.DELPOEM_MSG,poem.userid,title,content,delPoemExtend);
+			    		httputil.requstPSPost('/message/actionmsg',message,function(err,result){
+							if(err){
+								logger.error(err)
+							}
+						})
+	    			}
+		    	});
+	    		ru.resSuccess(res,result);
+	    	}
+  		})
+  	}
+});
 module.exports = router;

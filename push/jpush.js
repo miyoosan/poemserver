@@ -85,7 +85,8 @@ module.exports = {
 				    var notification = content;
 				    if(os == 'ios'){
 				        platform = 'ios';
-				        notification = JPush.ios(content,'',1,true,extras);
+				        // {title:title,subtitle:content} 支持json格式
+				        notification = JPush.ios({title:title,subtitle:content},'sound.caf',1,true,extras);
 				    }else if(os == 'android'){
 				        platform = 'android';
 				        notification = JPush.android(content,title,0,extras);
@@ -97,11 +98,11 @@ module.exports = {
 				      .setNotification(notification)
 				      // .setMessage(content,title,'text',extras)
 				      .send(function(err, res) {
-				          console.error(err)
 				          if (err) {
 				          	logger.error(err);
 				             callback(err,null);
 				          } else {
+				          	logger.info(res)
 				            callback(null,res);
 				          }
 				      });
@@ -109,6 +110,8 @@ module.exports = {
 				      logger.error(err);
 				      callback(err,null);
 				  }
+              }else{
+              	callback('获取用户pushid失败',null);
               } 
             }else{
               callback('获取用户pushid失败',null);

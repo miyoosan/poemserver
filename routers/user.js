@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 var http = require('http');
 var userDao = require('../dao/userDao');
+var reportDao = require('../dao/reportDao');
 var utils = require('../utils/utils'); 
 var httputil = require('../utils/httputil'); 
 var ru = require('../utils/routersutil');
@@ -470,7 +471,7 @@ router.post('/follows',function(req,res,next){
 	var userid = req.body.userid;
 	var type = req.body.type;
 	if(!userid){
-		resError(res,'参数错误');
+		ru.resError(res,'参数错误');
 	}else{
 		userDao.queryFollowType(myid,userid,type,function(err,result){
 			if(err){
@@ -549,5 +550,27 @@ router.post('/permission',function(req,res,next){
 		});
 	}
 });
-
+/**
+ * 举报
+ */
+router.post('/report',function(req,res,next){
+	ru.logReq(req);
+	var userid = req.body.userid;report
+	var type = req.body.type;
+	var report = req.body.report;
+	var custom = req.body.custom;
+	var rid = req.body.rid;
+	var ruserid = req.body.ruserid;
+	if(!userid||!type||(!report&&!custom)){
+		resError(res,'参数错误');
+	}else{
+		reportDao.addReport(userid,type,report,custom,rid,ruserid,function(err,result){
+			if(err){
+				ru.resError(res,err);
+			}else{
+				ru.resSuccess(res,{tips:'举报成功，客服将会在确认后对其进行处理'});
+			}
+		});
+	}
+});
 module.exports = router;

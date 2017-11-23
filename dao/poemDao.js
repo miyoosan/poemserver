@@ -120,6 +120,18 @@ module.exports = {
         });
 	},
     /**
+     * 查询作品基本信息
+     */
+    queryPoem(pid,callback){
+        var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ? AND del = 0 LIMIT 1';
+        pool.getConnection(function(err, connection) {
+            connection.query(sql, pid, function(err, result) {
+                callback(err, result)
+                connection.release();
+            });
+        });
+    },
+    /**
      *作品详情
      */
     queryPoemInfo(pid,userid,callback){
@@ -421,7 +433,7 @@ module.exports = {
      */
     addLoveNum(pid,callback){
         pool.getConnection(function(err, connection) {
-            var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ?'
+            var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ? AND del = 0'
             connection.query(sql, [pid], function(err, result) {
                 if(err){
                     callback(err, result)
@@ -445,7 +457,7 @@ module.exports = {
      */
     reduceLoveNum(pid,callback){
         pool.getConnection(function(err, connection) {
-            var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ?'
+            var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ? AND del = 0'
             connection.query(sql, [pid], function(err, result) {
                 if(err){
                     callback(err, result)
@@ -477,7 +489,7 @@ module.exports = {
      */
     addCommentNum(pid,callback){
         pool.getConnection(function(err, connection) {
-            var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ?'
+            var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ? AND del = 0'
             connection.query(sql, [pid], function(err, result) {
                 if(err){
                     callback(err, result)
@@ -501,7 +513,7 @@ module.exports = {
      */
     reduceCommentNum(pid,callback){
         pool.getConnection(function(err, connection) {
-            var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ?'
+            var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = ? AND del = 0'
             connection.query(sql, [pid], function(err, result) {
                 if(err){
                     callback(err, result)
@@ -533,7 +545,7 @@ module.exports = {
      */
     queryLoveComment(pid,callback){
         pool.getConnection(function(err, connection) {
-            var sql = 'SELECT id,lovenum,commentnum FROM '+POEM_TABLE+' WHERE id = ? ';
+            var sql = 'SELECT id,lovenum,commentnum FROM '+POEM_TABLE+' WHERE id = ? AND del = 0';
             connection.query(sql, [pid], function(err, result) {
                 callback(err, result)
                 connection.release(); 

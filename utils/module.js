@@ -23,6 +23,12 @@ var FollowExtend = function(userid,head,pseudonym){
 	this.head = head||'';
 	this.pseudonym = pseudonym||'';
 }
+/**
+ * 删除作品
+ */
+var DelPoemExtend = function(pid){
+	this.pid = pid||'';
+}
 
 var Message = function(type,userid,title,content,extend){
 	this.type = type||0;
@@ -39,7 +45,7 @@ MessageType.SYS_MSG = 0;//系统消息
 MessageType.LOVE_MSG = 1;//点赞
 MessageType.COMMENT_MSG = 2;//评论
 MessageType.FOLLOW_MSG = 3;//关注
-
+MessageType.DELPOEM_MSG = 4;//作品违规被删除
 
 var PushType = function(){
 
@@ -51,6 +57,7 @@ module.exports = {
 	LoveExtend,
 	CommentExtend,
 	FollowExtend,
+	DelPoemExtend,
 	Message,
 	MessageType,
 	PushType,
