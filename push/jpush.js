@@ -33,12 +33,15 @@ module.exports = {
 	  }
 	  // logger.info('---notification:'+notification)
 		//easy push
+		var production = server.env === server.ali;
+	    logger.info('---production:'+production);
 		client.push().setPlatform(platform)
 		    .setAudience(JPush.ALL)
 		    .setNotification(content,
 		    	JPush.ios(content,'',1,true,extras),
 		    	JPush.android(content,title,0,extras))
 	        // .setMessage(content,title,'text',extras)
+	        .setOptions(null,null,null,production)
 		    .send(function(err, res) {
 		        if (err) {
 		        	logger.error(err);
@@ -93,10 +96,13 @@ module.exports = {
 				    }
 				    logger.info('---extras:');
 				    logger.info(extras);
+				    var production = server.env === server.ali;
+				    logger.info('---production:'+production);
 				    client.push().setPlatform(platform)
 				      .setAudience(JPush.registration_id(pushid))
 				      .setNotification(notification)
 				      // .setMessage(content,title,'text',extras)
+				      .setOptions(null,null,null,production)
 				      .send(function(err, res) {
 				          if (err) {
 				          	logger.error(err);
