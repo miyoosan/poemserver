@@ -102,11 +102,14 @@ router.post('/uploadimg', function(req, res, next){
     var file_path = path.join(__dirname, '../images/');
     var form = new multiparty.Form({uploadDir: file_path});
     form.parse(req, function(err, fields, files){
+      console.log('---files');
       console.log(files);
         if(err){
             resError(res,err);
         }else{
             var inputFile = files.file[0];
+            console.log('---inputFile');
+            console.log(inputFile);
             var file_name = Date.now()+'_'+inputFile.originalFilename;
             var file_md5_name = crypto.createHash('md5').update(file_name).digest('hex');
             var uploadedPath = inputFile.path;
@@ -116,11 +119,11 @@ router.post('/uploadimg', function(req, res, next){
                 if(err){
                     resError(res,err);
                 } else {
-                      // console.log('------压缩图片')
+                      console.log('------压缩图片')
                       gm(bigPath)
                               .size(function (err, size) {
-                                // console.log('---获取图片尺寸')
-                                // console.log(size)
+                                console.log('---获取图片尺寸')
+                                console.log(size)
                                 if (err){
                                     resError(res,err);
                                 }else{

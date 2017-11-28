@@ -22,11 +22,11 @@ router.post('/addpoem', function(req, res, next) {
     var userid = req.body.userid;
     var title = req.body.title;
     var content = req.body.content;
-    var time = utils.getTime();
+    var extend = req.body.extend;
     if(!title||!content||!userid){
 		ru.resError(res,'参数错误');
     }else{
-    	poemDao.addPoem(userid,title,content,time,function(err,result){
+    	poemDao.addPoem(userid,title,content,extend,function(err,result){
 	    	if(err){
 				ru.resError(res,err);
 	    	}else{
@@ -49,10 +49,11 @@ router.post('/uppoem', function(req, res, next) {
     var userid = req.body.userid;
     var title = req.body.title;
     var content = req.body.content;
+    var extend = req.body.extend;
     if(!title||!content||!id||!userid){
 		ru.resError(res,'参数错误');
     }else{
-    	poemDao.upPoem(id,userid,title,content,function(err,result){
+    	poemDao.upPoem(id,userid,title,content,extend,function(err,result){
 	    	if(err){
 	    		ru.resError(res,err);
 	    	}else{
