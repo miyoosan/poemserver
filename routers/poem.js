@@ -272,7 +272,28 @@ router.post('/commentpoem', function(req, res, next) {
 		});
 	}
 });	
-
+/**
+ * 删除评论
+ */
+router.post('/delcomment', function(req, res, next) {
+	ru.logReq(req);
+    var userid = req.body.userid;
+    var id = req.body.id;
+    var pid = req.body.pid;
+    if(!id||!pid||!userid){
+    	ru.resError(res,'参数错误');
+    }else{
+    	poemDao.delComment(id,userid,function(err,result){
+	    	if(err){
+	    		ru.resError(res,err);
+	    	}else{
+	    		poemDao.reduceCommentNum(pid,function(err,comment){})
+	    		var poem = {id:parseInt(id),userid:userid};
+				ru.resSuccess(res,poem);
+	    	}
+	    })
+    }
+});
 /**
  * 最新评论
  */

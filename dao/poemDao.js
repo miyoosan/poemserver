@@ -322,6 +322,18 @@ module.exports = {
         });
     },
     /**
+     * 删除评论
+     */
+    delComment:function(id,userid,callback){
+        var sql = 'UPDATE '+COMMENT_TABLE+' SET del = 1 WHERE id = ? AND userid = ?';
+        pool.getConnection(function(err, connection) {
+            connection.query(sql, [id,userid], function(err, result) {
+                callback(err, result)
+                connection.release();
+            });
+        });
+    },
+    /**
      * 查询最新评论
      */
     queryNewestComment(fromid,pid,callback){
