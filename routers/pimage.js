@@ -98,12 +98,25 @@ router.get('/file/:fileName', function(req, res, next) {
 
 router.post('/uploadimg', function(req, res, next){
     logReq(req);
+    // console.log(req)
     console.log(req.get('Content-Type'));
     var file_path = path.join(__dirname, '../images/');
     var form = new multiparty.Form({uploadDir: file_path});
     form.parse(req, function(err, fields, files){
-      console.log('---files');
-      console.log(files);
+      // console.log('---fields.info');
+      // console.log(fields)
+      // console.log(fields.info)
+      // console.log(fields.info1)
+      // console.log(typeof(fields.info[0]))
+      // console.log(fields.info[0])
+      // console.log(JSON.parse(fields.info[0]).zoom)
+      // console.log('---files');
+      // console.log(files);
+        let zoom = 8;//基础缩放
+        if(fields.info != undefined&&fields.info[0]){
+          zoom = JSON.parse(fields.info[0]).zoom;//客户端自定义缩放参数
+        }
+        console.log('---zoom:',zoom)
         if(err){
             resError(res,err);
         }else{
@@ -127,9 +140,12 @@ router.post('/uploadimg', function(req, res, next){
                                 if (err){
                                     resError(res,err);
                                 }else{
-                                  let zoom = 8;
+                                  // let zoom = 8;
                                   let width = size.width/zoom;
                                   let height = size.height/zoom;
+                                  console.log('---压缩图片尺寸')
+                                  console.log('-----width:',width)
+                                  console.log('-----height:',height)
                                   gm(bigPath)
                                   .resize(width, height)
                                   .noProfile()
