@@ -568,7 +568,13 @@ router.post('/report',function(req,res,next){
 			if(err){
 				ru.resError(res,err);
 			}else{
-				ru.resSuccess(res,{tips:'举报成功，客服将会在确认后对其进行处理'});
+				let tips = ''
+				if(type == 1){
+					tips ='举报成功，客服将会在确认后对其进行处理';
+				}else if(type == 2){
+					tips = '名言报错成功，客服将会在确认后对其进行处理'
+				}
+				ru.resSuccess(res,{tips:tips});
 			}
 		});
 	}

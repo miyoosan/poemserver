@@ -83,18 +83,15 @@ router.post('/search', function(req, res, next) {
 router.post('/opoem', function(req, res, next) {
   ru.logReq(req);
   var id = req.body.id;
+  var userid = req.body.userid;
   if(!id){
     ru.resError(res,'参数错误');
   }else{
-    opoemDao.queryOPoem(id,function(err,result){
+    opoemDao.queryOPoem(userid,id,function(err,result){
         if(err){
           ru.resError(res,err);
         }else{
-          var opoem = {};
-          if(result.length > 0){
-            opoem = result[0];
-          }
-          ru.resSuccess(res,opoem);
+          ru.resSuccess(res,result);
         }
       });
   }

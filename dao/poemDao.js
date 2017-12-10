@@ -5,7 +5,8 @@ const POEM_TABLE = 'poem';
 const USER_TABLE = 'user';
 const COMMENT_TABLE = 'comment';
 const LOVE_TABLE = 'love';
-const LIMIT_NUM = '20';
+const STAR_TABLE = 'star';
+const LIMIT_NUM = '100';
 module.exports = {
     /*------------作品------------*/
     /**
@@ -88,6 +89,7 @@ module.exports = {
      */
 	queryHistoryPoem(userid,fromid,callback){
 		var sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id<? AND userid = ? AND del = 0  ORDER BY id DESC LIMIT '+LIMIT_NUM;
+        sql = 'SELECT poem.*,user.head,user.pseudonym,poem.time FROM ('+sql+') AS poem LEFT JOIN '+USER_TABLE+' ON poem.userid = user.userid';
 		pool.getConnection(function(err, connection) {
             connection.query(sql, [fromid,userid], function(err, result) {
             	callback(err, result)
@@ -144,7 +146,8 @@ module.exports = {
     queryPoemInfo(pid,userid,callback){
         var poem_sql = 'SELECT * FROM '+POEM_TABLE+' WHERE id = '+pid+' LIMIT 1';
         var love_commet_sql = 'SELECT * FROM '+LOVE_TABLE+' WHERE pid = '+pid+' AND userid = "'+userid+'" LIMIT 1';
-        var sql = poem_sql+';'+love_commet_sql;
+        var star_sql = 'SELECT * FROM '+STAR_TABLE+' WHERE type = 1 AND sid = '+pid+' AND userid = "'+userid+'" LIMIT 1';
+        var sql = poem_sql+';'+love_commet_sql+';'+star_sql;
         pool.getConnection(function(err, connection) {
             connection.query(sql, function(err, result) {
                 if(err){
@@ -157,6 +160,9 @@ module.exports = {
                         poem.love = 0;
                         if(result[1].length > 0){
                             poem.love = result[1][0].love;
+                        }
+                        if(result[2].length > 0){
+                            poem.star = result[2][0].star;
                         }
                     }
                     console.log(poem);

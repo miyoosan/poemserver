@@ -30,6 +30,14 @@ var DelPoemExtend = function(pid){
 	this.pid = pid||'';
 }
 
+var AddPoemExtend = function(pid,userid,head,pseudonym,title){
+	this.pid = pid||0;
+	this.userid = userid||'';
+	this.head = head||'';
+	this.pseudonym = pseudonym||'';
+	this.title = title||'';
+}
+
 var Message = function(type,userid,title,content,extend){
 	this.type = type||0;
 	this.userid = userid||'';
@@ -46,7 +54,7 @@ MessageType.LOVE_MSG = 1;//点赞
 MessageType.COMMENT_MSG = 2;//评论
 MessageType.FOLLOW_MSG = 3;//关注
 MessageType.DELPOEM_MSG = 4;//作品违规被删除
-
+MessageType.ADD_POEM_MSG = 5;//发布作品
 var PushType = function(){
 
 }
@@ -58,6 +66,7 @@ module.exports = {
 	CommentExtend,
 	FollowExtend,
 	DelPoemExtend,
+	AddPoemExtend,
 	Message,
 	MessageType,
 	PushType,

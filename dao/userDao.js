@@ -4,6 +4,8 @@ var logger = require('../utils/log4jsutil').logger(__dirname+'/userDao.js');
 const FOLLOW_TABLE = 'follow';//关注表
 const USER_TABLE = 'user';
 const VALIDATE_TABLE = 'validate';//验证码
+const STAR_TABLE = 'star';
+
 module.exports = {
 	// 查询用户
 	queryUser:function(phone,callback){
@@ -60,7 +62,8 @@ module.exports = {
         var myfollow = ' SELECT COUNT(*) AS count FROM '+FOLLOW_TABLE+' WHERE userid = "'+userid+'" AND fstate = 1';
         var followme = ' SELECT COUNT(*) AS count FROM '+FOLLOW_TABLE+' WHERE userid = "'+userid+'" AND tstate = 1';
         var follow = 'SELECT follow.fstate,follow.tstate FROM '+FOLLOW_TABLE+' WHERE userid = "'+myid+'" AND fansid = "'+userid+'"';
-        var sql = userinfo+';'+myfollow+';'+followme+';'+follow;
+        var star = ' SELECT COUNT(*) AS count FROM '+STAR_TABLE+' WHERE userid = "'+userid+'" AND star = 1';
+        var sql = userinfo+';'+myfollow+';'+followme+';'+follow+';'+star;
         // console.log(sql);
         pool.getConnection(function(err, connection) {
             connection.query(sql, function(err, result) {
@@ -79,6 +82,7 @@ module.exports = {
                        user.fstate = result[3][0].fstate;
                        user.tstate = result[3][0].tstate;
                      }
+                     user.starnum = result[4][0].count;
                   }
                   callback(err, user)
                   connection.release();                  
@@ -292,6 +296,15 @@ module.exports = {
         var sql = 'UPDATE user SET per = ?  WHERE userid = ? ';
         pool.getConnection(function(err, connection) {
             connection.query(sql, [per,userid], function(err, result) {
+                callback(err, result)
+                connection.release();
+            });
+        });
+    },
+    queryFollowMe:function(userid,callback){
+        var sql = 'SELECT * FROM '+FOLLOW_TABLE+' WHERE userid = "'+userid+'" AND tstate = 1';
+        pool.getConnection(function(err, connection) {
+            connection.query(sql, function(err, result) {
                 callback(err, result)
                 connection.release();
             });

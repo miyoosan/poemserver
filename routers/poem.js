@@ -4,11 +4,12 @@
 var express = require('express');
 var router = express.Router();
 var poemDao = require('../dao/poemDao');
+var userDao = require('../dao/userDao');
 var utils = require('../utils/utils'); 
 var httputil = require('../utils/httputil'); 
 var ru = require('../utils/routersutil');
 var logger = require('../utils/log4jsutil').logger(__dirname+'/poem.js');
-var {LoveExtend,CommentExtend,Message,MessageType} = require('../utils/module');
+var {LoveExtend,CommentExtend,AddPoemExtend,Message,MessageType} = require('../utils/module');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   //res.send('respond with a resource');
@@ -35,6 +36,25 @@ router.post('/addpoem', function(req, res, next) {
 	    			poem = result[0];
 	    		}
 				ru.resSuccess(res,poem);
+				// console.log(poem)
+				userDao.queryFollowMe(userid,function(err,result){
+					if(err){
+						logger.error(err);
+					}else{
+						if(result.length > 0){
+							for(var i = 0 ; i < result.length ; i ++){
+								var title = poem.pseudonym+'发布了新作品';
+							    var content = poem.pseudonym+'发布了['+poem.title+']';
+								var addpoemExtend = new AddPoemExtend(poem.id,poem.userid,poem.head,poem.pseudonym,poem.title);
+							    var message = new Message(MessageType.ADD_POEM_MSG,result[i].fansid,title,content,addpoemExtend);
+						    	httputil.requstPSPost('/message/actionmsg',message,function(err,result){
+						    		logger.debug(err);
+						    		logger.debug(result);
+						    	}); 
+							}
+						}
+					}
+				})
 	    	}
 	    })
     }

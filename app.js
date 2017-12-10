@@ -12,6 +12,7 @@ var admin = require('./routers/admin');
 var chat = require('./routers/chat');
 var banner = require('./routers/banner');
 var famous = require('./routers/famous');
+var star = require('./routers/star');
 
 var log4js = require('./utils/log4jsutil');
 
@@ -36,6 +37,7 @@ app.use('/admin', admin);
 app.use('/chat', chat);
 app.use('/banner', banner);
 app.use('/famous', famous);
+app.use('/star', star);
 
 app.use(function(err, req, res, next) {
   // 业务逻辑
