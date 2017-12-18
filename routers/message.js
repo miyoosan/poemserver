@@ -44,6 +44,33 @@ function addMessage(message,callback){
     }
   })
 }
+/**
+ * 添加多条消息
+ */
+function addMessages(messages,callback){
+  messageDao.addMessages(messages,function(err,result){
+      logger.info('--------addMessages--------');
+      if(err){
+         logger.error(err);
+          callback(err,null);
+      }else{
+          console.log(result)
+          var msgid = result.insertId;
+          var message = messages[0];
+          var userids = [];
+          for(var i = 0 ; i < messages.length ; i ++){
+            userids.push(messages[i].userid)
+          }
+          jpush.sendPushs(userids,msgid,message.title,message.content,PushType.NEWS,function(err,data){
+              if(err){
+                callback(err,null);
+              }else{
+                callback(null,data);
+              }
+          }); 
+      }    
+  });
+}
 
 
 router.get('/', function(req, res, next) {
@@ -69,7 +96,7 @@ router.post('/pushall', function(req, res, next) {
         for(var i = 0 ; i < result.length;i++){
           userids[i]= result[i].userid;
         }
-         messageDao.addMessages(MessageType.SYS_MSG,userids,title,content,{},function(err,result){
+         messageDao.addSysMessages(MessageType.SYS_MSG,userids,title,content,{},function(err,result){
               jpush.sendAllPush(title,content,os,function(err,data){
                    if(err){
                      ru.resError(res,err);
@@ -152,6 +179,24 @@ router.post('/actionmsg',function(req,res,next){
           ru.resSuccess(res,result);
         }
     });
+  }
+});
+/**
+ * 添加批量消息
+ */
+router.post('/actionmsgs',function(req,res,next){
+  ru.logReq(req);
+  var messages = req.body.messages
+  if(messages&&messages.length > 0){
+    addMessages(messages,function(err,result){
+        if(err){
+          ru.resError(res,err);
+        }else{
+          ru.resSuccess(res,result);
+        }
+    });
+  }else{
+    ru.resError(res,'参数错误');
   }
 });
 /**

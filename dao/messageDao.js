@@ -24,6 +24,24 @@ module.exports = {
             });
         });
 	},
+    getPushs:function(userids,callback){
+        // where id in('276','306','325')
+        var userids_str = '';
+        for(var i = 0 ; i < userids.length ; i++){
+            userids_str += '"'+userids[i]+'"';
+            if(i != userids.length - 1){
+                userids_str += ','
+            }
+        }
+        logger.info(userids_str)
+        var sql = 'SELECT * FROM '+PUSH_TABLE+' WHERE userid in ('+userids_str+')';
+        pool.getConnection(function(err, connection) {
+            connection.query(sql, function(err, result) {
+                callback(err, result)
+                connection.release();
+            });
+        });
+    },
 	addMessage:function(type,userid,title,content,extend,callback){
 		if(extend instanceof Object){
             extend = JSON.stringify(extend);
@@ -39,7 +57,27 @@ module.exports = {
             });
         });
 	},
-    addMessages:function(type,userids,title,content,extend,callback){
+    addMessages:function(messages,callback){
+        var time = utils.getTime();
+        var sql = 'INSERT INTO '+MESSAGE_TABLE+' (userid,title,content,type,extend,time) VALUES ';
+        for(var i = 0 ; i < messages.length ; i ++){
+            var message = messages[i];
+            var extend = message.extend;
+            if(extend instanceof Object){
+                extend = JSON.stringify(extend);
+            }
+            sql = sql+'("'+message.userid+'","'+message.title+'","'+message.content+'",'+message.type+',\''+extend+'\','+time+'),';
+        }
+        sql = sql.substr(0,sql.length-1)
+        console.log(sql);
+        pool.getConnection(function(err, connection) {
+            connection.query(sql, function(err, result) {
+                callback(err, result)
+                connection.release();
+            });
+        });
+    },
+    addSysMessages:function(type,userids,title,content,extend,callback){
         if(extend instanceof Object){
             extend = JSON.stringify(extend);
         }

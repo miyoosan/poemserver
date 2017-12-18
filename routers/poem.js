@@ -42,16 +42,18 @@ router.post('/addpoem', function(req, res, next) {
 						logger.error(err);
 					}else{
 						if(result.length > 0){
+							let messages = [];
 							for(var i = 0 ; i < result.length ; i ++){
 								var title = poem.pseudonym+'发布了新作品';
 							    var content = poem.pseudonym+'发布了['+poem.title+']';
 								var addpoemExtend = new AddPoemExtend(poem.id,poem.userid,poem.head,poem.pseudonym,poem.title);
 							    var message = new Message(MessageType.ADD_POEM_MSG,result[i].fansid,title,content,addpoemExtend);
-						    	httputil.requstPSPost('/message/actionmsg',message,function(err,result){
-						    		logger.debug(err);
-						    		logger.debug(result);
-						    	}); 
+								messages.push(message)
 							}
+							httputil.requstPSPost('/message/actionmsgs',{messages:messages},function(err,result){
+					    		logger.debug(err);
+					    		logger.debug(result);
+					    	}); 
 						}
 					}
 				})
@@ -163,8 +165,10 @@ router.post('/lovecomment', function(req, res, next) {
 	    		var poem = {};
 	    		if(result.length > 0 ){
 	    			poem = result[0];
+	    			ru.resSuccess(res,poem);
+	    		}else{
+	    			ru.resError(res,'作品ID失效');
 	    		}
-	    		ru.resSuccess(res,poem);
 	    	}
 	    });
 	}

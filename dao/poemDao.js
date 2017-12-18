@@ -164,10 +164,13 @@ module.exports = {
                         if(result[2].length > 0){
                             poem.star = result[2][0].star;
                         }
+                        // console.log(poem);
+                        callback(err, poem)
+                        connection.release();
+                    }else{
+                        callback('作品ID失效', null)
+                        connection.release();
                     }
-                    console.log(poem);
-                    callback(err, poem)
-                    connection.release();
                 }
             });
         });
