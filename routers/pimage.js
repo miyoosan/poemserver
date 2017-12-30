@@ -8,7 +8,7 @@ var fs = require('fs');
 var path = require('path'); 
 var crypto = require('crypto');
 var multiparty = require('multiparty');
-var gm = require('gm').subClass({imageMagick: true});;
+var gm = require('gm').subClass({imageMagick: true});
 
 var ResJson = function(){
 	this.code;
