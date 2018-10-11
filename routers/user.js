@@ -191,7 +191,7 @@ router.post('/register',function(req,res,next){
 	var os = req.body.os;
 	var userid = utils.getUserid(phone);
 	if(!phone||!password||!code){
-		ru.resError(res,err);
+		ru.resError(res,'参数错误!');
 	}else if(!utils.checkPhone(phone)){
 		ru.resError(res,'请填写正确的手机号格式');
 	}else{
