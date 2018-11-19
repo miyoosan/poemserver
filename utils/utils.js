@@ -1,4 +1,5 @@
 var crypto = require('crypto');
+var server = require('../conf/config').server;
 module.exports = {
 	getCode:function(){
 		var code=''; 
@@ -84,5 +85,12 @@ module.exports = {
 	 checkPhone:function(phone){
 		 let isphone = (/^1(3|4|5|7|8)\d{9}$/.test(phone));   
 		 return isphone
-	 }
+	 },
+	 getEcosystem:function(){
+		var ip = 'http://localhost:9422';
+		if(server.env == server.ali){
+			ip = 'http://ecosystem.zanzhe580.com';
+		}
+		return ip;
+	},
 }

@@ -13,6 +13,10 @@ var chat = require('./routers/chat');
 var banner = require('./routers/banner');
 var famous = require('./routers/famous');
 var star = require('./routers/star');
+var discuss = require('./routers/discuss');
+var comment = require('./routers/comment');
+var love = require('./routers/love');
+var cloud_config = require('./routers/cloud_config');
 
 var log4js = require('./utils/log4jsutil');
 
@@ -38,6 +42,10 @@ app.use('/chat', chat);
 app.use('/banner', banner);
 app.use('/famous', famous);
 app.use('/star', star);
+app.use('/discuss',discuss);
+app.use('/comment',comment);
+app.use('/love',love);
+app.use('/cloud_config', cloud_config);
 
 app.use(function(err, req, res, next) {
   // 业务逻辑

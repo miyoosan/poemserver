@@ -46,6 +46,41 @@ var Message = function(type,userid,title,content,extend){
 	this.extend = extend||{};
 }
 
+// 添加讨论
+var AddDiscussExtend = function(id,userid,head,nickname,title){
+	this.id = id||0;
+	this.userid = userid||'';
+	this.head = head||'';
+	this.nickname = nickname||'';
+	this.title = title||'';
+}
+
+/**
+ * 删除讨论
+ */
+var DelDiscussExtend = function(id){
+	this.id = id||'';
+}
+
+
+var DLoveExtend = function(title,userid,head,nickname,id){
+	this.title = title||'';
+	this.userid = userid||'';
+	this.head = head||'';
+	this.nickname = nickname||'';
+	this.id = id||'';
+}
+var DCommentExtend = function(title,userid,head,nickname,id,cid,comment){
+	this.title = title||'';
+	this.userid = userid||'';
+	this.head = head||'';
+	this.nickname = nickname||'';
+	this.id = id||'';
+	this.cid = cid||'';
+	this.comment = comment||'';
+}
+
+
 var MessageType = function(){
 
 }
@@ -55,6 +90,9 @@ MessageType.COMMENT_MSG = 2;//评论
 MessageType.FOLLOW_MSG = 3;//关注
 MessageType.DELPOEM_MSG = 4;//作品违规被删除
 MessageType.ADD_POEM_MSG = 5;//发布作品
+MessageType.DADD = 6;//添加讨论
+MessageType.DLOVE = 7;//点赞讨论
+MessageType.DCOMMENT = 8;//评论讨论
 var PushType = function(){
 
 }
@@ -67,6 +105,10 @@ module.exports = {
 	FollowExtend,
 	DelPoemExtend,
 	AddPoemExtend,
+	AddDiscussExtend,
+	DelDiscussExtend,
+	DLoveExtend,
+	DCommentExtend,
 	Message,
 	MessageType,
 	PushType,

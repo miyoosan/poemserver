@@ -16,7 +16,7 @@ var conf_validate = require('../conf/config').server.validate;
 var conf_sms = require('../conf/config').server.sms;
 var deftext = require('../conf/deftext');
 logger.info(conf_validate)
-logger.info(deftext)
+// logger.info(deftext)
 /* GET user listing. */
 router.get('/', function(req, res, next) {
   //res.send('respond with a resource');

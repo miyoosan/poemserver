@@ -1,5 +1,6 @@
-var http = require('http');
 var logger = require('./log4jsutil').logger(__dirname+'/httputil.js');
+var http = require('http');
+var request = require('request');
 module.exports = {
 	/**
 	 * 请求服务器
@@ -128,6 +129,19 @@ module.exports = {
 	    });  
 	    req.write(data + "\n");  
 	    req.end();  
-	}
+	},
+	requstUrl:function(url,callback){
+		request(url, function (error, response, body) {
+		  if (error) {
+		  	callback(error,null)
+		  }else{
+		  	if(response.statusCode == 200){
+		  		callback(null,body)
+		  	}else{
+		  		callback(new Error(response.statusCode),null)
+		  	}
+		  }
+		})
+	},
 
 }
